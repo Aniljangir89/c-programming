@@ -1,0 +1,30 @@
+# how to find npr in this pettren?
+# by anilkumar 2212090
+#include <stdio.h>
+int com(int x){
+    int c;
+    c=1;
+    for(int i=1;i<=x;i++){
+        c=c*i;
+    }
+    return c;
+}
+int fact(int n,int r){
+    int facn=com(n);
+    int facd=com(n-r);
+    int ipj= facn/facd;
+    return ipj;
+}
+int main() {
+ int n,r,a,b;
+ printf("enter the value of n:-");
+ scanf("%d",&n);
+ for(int i=0;i<=n;i++){
+     for(int j=0;j<=i;j++){
+        int npr= fact(i,j);
+         printf("%d\t",npr);
+     }
+     printf("\n");
+ }
+    return 0;
+}
