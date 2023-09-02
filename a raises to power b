@@ -1,0 +1,23 @@
+// find the power of a using min calling function
+// in case of time complexity
+//2212090
+#include <stdio.h>
+int power(int a,int b){
+    if(b==0)
+    return 1 ;
+    int p=power(a,b/2);
+    if(b%2==0)
+    return p*p ;
+    else 
+    return p*a*p ;
+}
+int main() {
+   int a,b;
+   printf("enter the a:-");
+   scanf("%d",&a);
+   printf("enter the b:-");
+   scanf("%d",&b); 
+   int c=power(a,b);
+   printf("the power is:-%d",c);
+    return 0;
+}
